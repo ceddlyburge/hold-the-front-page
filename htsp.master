@@ -1,0 +1,32 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="htsp.master.cs" Inherits="htsp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Hold The Front Page!</title>
+    <link media="screen" href="htsp.css" type="text/css" rel="StyleSheet"/>
+        <asp:contentplaceholder id="head" runat="server">
+        </asp:contentplaceholder>
+     <!--[if lte IE 6]>
+    <style>
+    * { min-height: 0; }
+    </style>
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <style>
+    * { zoom: 1; }
+   </style>
+   <![endif]-->
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:contentplaceholder id="main" runat="server">
+        </asp:contentplaceholder>
+    </div>
+    </form>
+</body>
+</html>
+

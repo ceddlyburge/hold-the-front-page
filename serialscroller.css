@@ -1,0 +1,46 @@
+﻿body {
+}
+
+.next, .prev
+{
+ float:left;
+	cursor:pointer;
+}
+
+	
+	#navigation{
+		width:600px;
+		text-align:center;
+		margin-left:62px;
+	}
+		#navigation ul{
+			margin-left:55px !important;
+			margin-left:35px;
+		}
+			#navigation li
+			{
+			 display: inline; 
+				margin:0 20px;
+				padding:10px 20px;
+				background-color:#EEE;
+			}
+				#navigation a{
+					color:#933;
+					font-weight:bolder;
+					text-decoration:none;
+				}
+	
+
+	
+ul.scrolling{
+	padding:0;
+	margin:0;
+}
+	
+	li.scrolling
+	{
+ 	padding:0;
+ 	margin:0;
+ 	list-style:none;
+	}
+			

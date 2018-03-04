@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-16"?><article xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+
+<articlepart>
+<content>headline</content>
+<chooseoneparagraphs> 
+
+<paragraph> <style>headline</style> 
+<textparts> 
+
+<statictext> <startdeck>true</startdeck><style>headline</style> <text>I AM THE</text> </statictext>
+<statictext> <startdeck>true</startdeck><style>headline</style> <text>LORD OF</text> </statictext>
+<statictext> <startdeck>true</startdeck><style>headline</style> <text>THE DANCE</text> </statictext>
+<statictext> <startdeck>true</startdeck><style>headline</style> <text>SAID </text> </statictext>
+<replacetext><capitalise>allupper</capitalise> <style>headline</style> <defaulttext>Josie</defaulttext> <maxlength>5</maxlength> <prompt>Nickname</prompt> </replacetext>
+</textparts> 
+</paragraph>
+
+<paragraph> <style>headline</style> 
+<textparts> 
+
+<replacetext><startdeck>true</startdeck> <capitalise>allupper</capitalise> <style>headline</style> <defaulttext>Joey</defaulttext> <maxlength>5</maxlength> <prompt>Nickname</prompt> </replacetext>
+<statictext><style>headline</style> <text> IS</text> </statictext>
+<statictext> <startdeck>true</startdeck> <style>headline</style> <text>LORD OF</text> </statictext>
+<statictext> <startdeck>true</startdeck><style>headline</style> <text>DANCE</text> </statictext>
+
+</textparts> 
+</paragraph>
+
+<paragraph> <style>headline</style> 
+<textparts> 
+<replacetext><startdeck>true</startdeck> <capitalise>allupper</capitalise> <style>headline</style> <defaulttext>Joe</defaulttext> <maxlength>5</maxlength> <prompt>Nickname</prompt> </replacetext>
+<statictext> <style>headline</style> <text> IS LORD</text> </statictext>
+<statictext> <startdeck>true</startdeck><style>headline</style> <text>OF THE DANCE</text> </statictext>
+
+</textparts> 
+</paragraph>
+
+</chooseoneparagraphs> 
+</articlepart>
+
+<articlepart>
+<content>subhead</content>
+
+<chooseoneparagraphs> 
+
+<paragraph> <style>subhead</style> 
+<textparts> <replacetext> <style>subhead</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext>
+<statictext> <style>subhead</style> <text>storms on stage!!</text> </statictext></textparts> </paragraph>
+
+<paragraph> <style>subhead</style> <textparts> <replacetext> <style>subhead</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext><statictext> <style>subhead</style> <text>,</text> </statictext><replacetext> <style>subhead</style> <defaulttext>29</defaulttext> <maxlength>3</maxlength> <prompt>Age</prompt> </replacetext>
+<statictext> <style>subhead</style> <text>astonishes millions as he stormed onto the stage</text> </statictext></textparts> </paragraph>
+
+<paragraph> <style>subhead</style> <textparts> <replacetext> <style>subhead</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext><statictext> <style>subhead</style> <text>,</text> </statictext><replacetext> <style>subhead</style> <defaulttext>29</defaulttext> <maxlength>3</maxlength> <prompt>Age</prompt> </replacetext>
+<statictext> <style>subhead</style> <text>astonished millions as he stormed onto the stage for Saturday night's final</text> </statictext></textparts> </paragraph>
+
+<paragraph> <style>subhead</style> <textparts> <replacetext> <style>subhead</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext><statictext> <style>subhead</style> <text>,</text> </statictext><replacetext> <style>subhead</style> <defaulttext>29</defaulttext> <maxlength>3</maxlength> <prompt>Age</prompt> </replacetext>
+<statictext> <style>subhead</style> <text>astonished millions as he stormed onto the stage for Saturday night's final - then BEAT pop star Alesha Dixon to the coveted title.</text> </statictext></textparts> </paragraph>
+
+<paragraph> <style>subhead</style> <textparts> <replacetext> <style>subhead</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext><statictext> <style>subhead</style> <text>,</text> </statictext><replacetext> <style>subhead</style> <defaulttext>29</defaulttext> <maxlength>3</maxlength> <prompt>Age</prompt> </replacetext>
+<statictext> <style>subhead</style> <text>astonished millions as he stormed onto the stage for Saturday night's final - then BEAT pop star Alesha Dixon and Eastenders favourite Matt di Angelo to the coveted title.</text> </statictext></textparts> </paragraph>
+
+</chooseoneparagraphs> 
+</articlepart>
+
+<articlepart>
+<content>strap</content>
+<paragraphs>
+
+<paragraph><style>strap</style> <textparts><statictext> <style>strap</style> <text>WORLD EXCLUSIVE!!!</text> </statictext></textparts> </paragraph>
+
+</paragraphs>
+</articlepart>
+
+<articlepart>
+<content>extra</content>
+<paragraphs>
+
+<paragraph><style>subhead</style> <textparts><replacetext> <style>subhead</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext><statictext> <style>subhead</style> <text> struts his funky stuff!!!!!!</text> </statictext></textparts></paragraph>
+
+</paragraphs>
+</articlepart>
+
+<articlepart>
+<content>body</content>
+<paragraphs>
+
+<paragraph><optional>false</optional><optional>false</optional> <style>body</style> <textparts><statictext> <style>paragraph2</style> <text>The</text> </statictext> <replacetext> <style>paragraph2</style> <defaulttext>builder</defaulttext> <maxlength>10</maxlength> <prompt>Occupation</prompt> </replacetext><statictext> <style>paragraph2</style> <text>of</text> </statictext>
+<replacetext> <style>paragraph2</style> <defaulttext>Shiplake, Oxon</defaulttext> <maxlength>10</maxlength> <prompt>Address</prompt> </replacetext>
+<statictext> <style>paragraph2</style> <text>- who was in the audience celebrating his birthday - wowed the judges with his fancy footwork and special moves including the 'lasso', the 'robot' and the 'funky chicken'. </text> </statictext></textparts> </paragraph>
+
+<paragraph> <optional>false</optional><style>body</style> <textparts>
+<replacetext> <style>body</style> <defaulttext>Married dad-of-eight</defaulttext> <maxlength>20</maxlength> <prompt>Short Description</prompt> </replacetext>
+<replacetext> <style>body</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext>
+<statictext> <style>body</style> <text>last night said: "Everyone knows the power of my moves, and tonight they finally got the recognition they deserved."</text> </statictext>
+</textparts> </paragraph>
+
+<paragraph><optional>false</optional> <style>body</style> <textparts><statictext> <style>body</style> <text>Snake-hipped</text> </statictext> 
+<replacetext> <style>body</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext>
+<statictext> <style>body</style> <text>was in Boogie Wonderland as all four judges gave him perfect scores - an unstoppable score that made actor Matt break down and blub like a baby. 
+Judge Len Goodman raved: "It is rare to see the funky chicken performed with such flair and panache. Ten out of ten."</text> </statictext></textparts> </paragraph>
+
+<paragraph> 
+<optional>true</optional>
+ <style>body</style> <textparts><statictext> <style>body</style> <text>And</text> </statictext> 
+<replacetext> <style>body</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext>
+<statictext> <style>body</style> <text>really caught the eye of 'fruity' panellist Bruno Tonioli.</text> </statictext></textparts> 
+</paragraph> 
+
+<paragraph> 
+<optional>true</optional>
+ <style>body</style> <textparts><statictext> <style>body</style> <text>Blushing Bruno simpered: "The hip thrusts almost had my eye out. Your salsa made my groin rumba-l. You're hot, hot, HOT!"</text> </statictext> 
+</textparts> 
+</paragraph> 
+
+<paragraph> 
+<optional>true</optional>
+ <style>body</style> <textparts><statictext> <style>body</style> <text>Sources last night revealed that </text> </statictext> 
+<replacetext> <style>body</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext>
+<statictext> <style>body</style> <text>rejected Bruno's advances - telling him to Foxtrot Off after the show.</text> </statictext></textparts> 
+</paragraph> 
+
+</paragraphs> 
+
+<chooseoneparagraphs> 
+
+<paragraph> <style>body</style> <textparts>
+<replacetext> <style>body</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext>
+<statictext> <style>body</style> <text>denied rumours of a nightblub tour.</text> </statictext></textparts> </paragraph>
+
+
+<paragraph> <style>body</style> <textparts>
+<replacetext> <style>body</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext>
+<statictext> <style>body</style> <text>denied last night that he is to tour 40 UK nightclubs to "strut his funky stuff".</text> </statictext></textparts> </paragraph>
+
+<paragraph> <style>body</style> <textparts>
+<replacetext> <style>body</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext>
+<statictext> <style>body</style> <text>denied  rumours last night that he was preparing for a 20-week tour of UK nightclubs to show off his "funky stuff".</text> </statictext></textparts> </paragraph>
+
+<paragraph> <style>body</style> <textparts>
+<replacetext> <style>body</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext>
+<statictext> <style>body</style> <text>refused to confirm rumours last night that he was preparing for a gruelling 20-week tour of the UK's 40 most 'boogielicious' nightclubs to show off his "funky stuff".</text> </statictext></textparts> </paragraph>
+
+<paragraph> <style>body</style> <textparts>
+<replacetext> <style>body</style> <defaulttext>Joe</defaulttext> <maxlength>10</maxlength> <prompt>First name</prompt> </replacetext>
+<statictext> <style>body</style> <text>refused to confirm rumours last night that he was preparing for a gruelling 20-week tour of the UK's 40 most 'boogielicious' nightclubs to show off his "funky stuff". Family sources say that he is keeping his options open at the moment and listening to offers. He was quoted as saying "Nothing has been written off at the moment and I'm sure that we can find a way to keep my fans happy".</text> </statictext></textparts> </paragraph>
+
+</chooseoneparagraphs> 
+</articlepart>
+</article> 

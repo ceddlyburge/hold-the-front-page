@@ -1,0 +1,166 @@
+path C:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\Bin
+
+To Do
+-----------------------------------------------------------------------------------------------------------------------
+maybe use servercentre again
+ - £20 per year if I use a mysqldatabase
+ - I am happy to pay for this
+ - get working with mysql
+ - upload onto servercentre
+
+Scrolling for articles doesn't work in flock
+ - works for choose layout - look for differences
+
+when no existing picture in flock we can still see the alternate text, want to correct this
+
+If choosing a new article then need to need to customise the article as well
+ - for when changing from the first chosen article
+ - done
+
+All pages
+ - option to return to front page (congratulations page) instead of doing all articles / all pictures / whatever.
+ - goes back automaticaly to review page now
+
+Choose articles
+ - allow to keep existing choice if there is one
+ - hmm, don't think need this as goes back to review page automatically
+
+Choose layout
+ - allow to keep existing choice if there is one
+ - hmm, don't think need this as goes back to review page automatically
+
+Choose Pictures
+ - Validate for the various buttons - done
+ - maybe add a dpi warning - don't bother with this for now
+ - not going to worry about borders for the time being
+ - layout might want to define a border for optional pictures - done
+ - might want to have a small version of the uploaded picture so the page responds well
+   - can't be bothered with this for the time being
+
+Customise Articles
+ - keep a separate customisation for each article so that they can be about different people
+ - done - hard to test properly as only one article
+
+Review Page
+ - Done
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Scrolling
+ - have first and last buttons as well, should be fairly easy I think. Stack these on top of existing buttons?
+ - show / hide or enable disable buttons depending on position
+ - degrade if no javascript
+   - divert to page explaning javascript is required - prob best idea as javascript definitely is required
+
+Looking nice
+ - left.gif and other subjectpositionpictures are seethrough so we can choose the background colour from the style sheet
+ - all graphical stuff done in style sheet, dave can fuck around with later if he wants
+
+Write program to make front page thumbnails and populate database from all layouts in layouts folder
+Write program to populate database from all articles in articles folder
+
+Headlines
+ - number of decks specified in article.
+   - could specify in layout as well, othwerise decks is worked out from the point size and the layout height
+   - decks is probably easier to specify but height would need to be known anyway to make everything line up
+   - can probably ignore in that case
+   - not sure what I'm talking about here. Think it is all ok
+ - is it possible to get headlines to fill the space automatically?
+   - know number of decks, know width, set point size accordingly?
+   - not sure about this
+   - probably best to set this in layout as can test it and be sure it is as wanted
+
+Plan
+
+Optimisation
+ - if we are special effecting then best to use graphics paths already made if doable
+   - not sure I can be arsed with this. Won't be special effecting much text as only for headlines and subs
+ - sessionlayout loads the background image whenever it is instantiated, this is probably not always required
+ - although headline stuff measured twice and addpath kind of done quite a lot as well
+ - which is best, using more memory or making more calls?
+ - maybe keep graphics path from when we measured the character to use later for drawing? - could go in 
+headlines
+ - measureheadlineparagraph
+   - not sure that we need to do the normal measure text here - can save time
+     - replicate the bits that we require like splitting the words and suchlike
+     - think I use existing height and if it is a lot over then I don't bother doing the headline stuff
+
+Underlining
+ - p's don't look very good as have a big gap in the underline. 
+   - we polygon-ise the text anyay, could and this with anything under the baseline and then use the bits that are poking down from baseline as the areas to underline. Bit of a hassle though, not planning on doing this, might not be possible anyway.
+ - can get a tiny bit of underline left over at end of line - seem to have sorted this
+ - doesn't work with special effecting. Ie no special effects for the underline.
+   - don't seem to need this, although woudn't be too hard to do
+ - text and path doesn't always match up perfectly. Should only be underlining at largeish fonts which should be better
+    - think this is as good as it can be.
+
+
+Talk to Dave
+-----------------------------------------------------------------------------------------------------------------------
+commas are a problem on their own in textparts as will have a space either side of them.
+last line of headline to be left justified if rest is fully justified?
+
+May want large and small articles and have layouts work with this
+Need to define rules that articles and layouts have to follow to fit together
+ - Articles min x paragraphs, min x words, same for max
+When adding a new article need to make sure it works with all existing layouts
+When adding a new layout need to make sure it works with all existing articles
+Probably will have more articles than layouts
+
+--------------------------------------------------------------------------------------------------------------------------------
+   reference type stuff
+--------------------------------------------------------------------------------------------------------------------------------
+	Width	Max	Min	Kerning	Max	Min
+W	26	27	24	2	3	1	
+I	4	5	3	4	5	3
+N	16	17	15	4	5	3
+S	16	17	15
+				8	10	6
+S	16	17	15	3	4	2
+T	16	17	15	3	4	2
+R	17	18	16	3	4	2
+I	4	5	3	3	4	2
+C	18	19	17	2	3	1
+T	16	17	15	3	4	2
+L	13	14	12	0	1	-1
+Y	19	20	18
+
+graphics.fromimage picks up some settings from the jpeg which seem to cock up the fuzzy drawing code. We can get round this by making a bitmap ourselves (with default settings which will be the same every time) and then drawing the jpg bitmap to it (which doesn't copy across these funny settings). Drawing the jpg to the bitmap can draw the wrong size due to these funny settings so we have to scale it to the correct size. This is all very weird but it seems to work.
+
+font sizes measured in points make us get the widths wrong
+ - this has been sorted out by creating our own bitmap with its default settings
+
+To Do at some point or maybe never
+-----------------------------------------------------------------------------------------------------------------------
+
+Picture stuff
+ - allow rotate, flip vert / horz, black / white
+ - fancier uploading
+
+GraphicsPath does create a set of lines and curves when using addstring. Could use these values to draw the path ourselves and do the bevelled effect that the sun usually has. Would probably need to flatten the image first in a high quality mode (lots of lines) and then work out the angle of each line. This angle can then work out how much light is striking the line. Would still need to draw twice, once top left and once bot right. First would make 45 degress the brightest. -45 degress would get no light. The second would make the image darker. 45 would get most darkness, -45 would get nothing.
+ - do this later on when doing finishing touches type stuff.
+ - quality will be diminished using only straight lines. if have too few straight lines then it might just be one picel long lines which would be no good for working out the angles
+
+space between paragraphs an issue
+ - if we want space - maybe (hopefully) not required
+ - no space at top and bottom will need to be sorted out
+
+Can create an xml schema from an xml file
+-Load an XML instance document into the XML Editor.
+-Click the Create Schema button from the Toolbar.
+
+lightening / darkening
+ - do this with alpha blending / transparency in front page images. Can use png's for this.
+ - Actually I think that alpha blending will probably be easier here. Can have it in the frontpage bitmap and not much else to do. Or can try and do a gradient draw with alpha blending or something like that. Quite possible I think.
+Microsoft.Xna.Framework.Graphics
+spriteBatch.Begin(SpriteBlendMode.AlphaBlend, SpriteSortMode.Immediate, SaveStateMode.None); graphicsDevice.RenderState.SourceBlend = Blend.DestinationColor; graphicsDevice.RenderState.DestinationBlend = Blend.SourceColor;
+
+Testing
+-----------------------------------------------------------------------------------------------------------------------
+Loop through all layouts and make a list of all unique shapes that articles have to fit in
+Write to all these
+ - code to check that article will fit and that there isn't a too big gap.
+ - code to try smallest and largest values allowed in the replacement fields.
+ - code to produce a report (html / pdf / whatever) with all combinations so we can check it makes sense
+   - Ordered by size not by article so that when reading don't get too complacement about the same / similar text
+   - don't output two texts which are identical as a result of similar size layouts

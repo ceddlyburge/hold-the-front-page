@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="articleitem" nillable="true" type="articleitem" />
+  <xs:complexType name="articleitem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="text" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="style" type="paragraphstyletype" />
+      <xs:element minOccurs="1" maxOccurs="1" name="height" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="paragraphstyletype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="psheadline" />
+      <xs:enumeration value="pssubhead" />
+      <xs:enumeration value="psstrap" />
+      <xs:enumeration value="psbyline" />
+      <xs:enumeration value="psintro" />
+      <xs:enumeration value="psparagraph2" />
+      <xs:enumeration value="psbody" />
+      <xs:enumeration value="pscaption" />
+      <xs:enumeration value="pscrossref" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="articleitemoptional" nillable="true" type="articleitemoptional" />
+  <xs:complexType name="articleitemoptional">
+    <xs:complexContent mixed="false">
+      <xs:extension base="articleitem">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="order" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="articleitemoneoflist" nillable="true" type="articleitemoneoflist" />
+  <xs:complexType name="articleitemoneoflist" />
+  <xs:element name="article" nillable="true" type="article" />
+  <xs:complexType name="article" />
+  <xs:element name="paragraphstyletype" type="paragraphstyletype" />
+  <xs:element name="paragraphstyle" nillable="true" type="paragraphstyle" />
+  <xs:complexType name="paragraphstyle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="brush" type="Brush" />
+      <xs:element minOccurs="0" maxOccurs="1" name="stringformat" type="StringFormat" />
+      <xs:element minOccurs="1" maxOccurs="1" name="justify" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Brush" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="MarshalByRefObject" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MarshalByRefObject" abstract="true" />
+  <xs:complexType name="StringFormat">
+    <xs:complexContent mixed="false">
+      <xs:extension base="MarshalByRefObject">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="FormatFlags" type="StringFormatFlags" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Alignment" type="StringAlignment" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LineAlignment" type="StringAlignment" />
+          <xs:element minOccurs="1" maxOccurs="1" name="HotkeyPrefix" type="HotkeyPrefix" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Trimming" type="StringTrimming" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="StringFormatFlags">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="DirectionRightToLeft" />
+          <xs:enumeration value="DirectionVertical" />
+          <xs:enumeration value="FitBlackBox" />
+          <xs:enumeration value="DisplayFormatControl" />
+          <xs:enumeration value="NoFontFallback" />
+          <xs:enumeration value="MeasureTrailingSpaces" />
+          <xs:enumeration value="NoWrap" />
+          <xs:enumeration value="LineLimit" />
+          <xs:enumeration value="NoClip" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:simpleType name="StringAlignment">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Near" />
+      <xs:enumeration value="Center" />
+      <xs:enumeration value="Far" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="HotkeyPrefix">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Show" />
+      <xs:enumeration value="Hide" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringTrimming">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Character" />
+      <xs:enumeration value="Word" />
+      <xs:enumeration value="EllipsisCharacter" />
+      <xs:enumeration value="EllipsisWord" />
+      <xs:enumeration value="EllipsisPath" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="articlestyle" nillable="true" type="articlestyle" />
+  <xs:complexType name="articlestyle" />
+</xs:schema>
